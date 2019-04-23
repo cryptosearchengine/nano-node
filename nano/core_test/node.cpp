@@ -666,8 +666,8 @@ TEST (node_config, v15_v16_upgrade)
 	};
 
 	// Check that upgrades work with both
-	test_upgrade ("rai.raiblocks.net", "peering.nano.org");
-	test_upgrade ("rai-beta.raiblocks.net", "peering-beta.nano.org");
+	test_upgrade ("peer.maars.com", "peering.maars.com");
+	test_upgrade ("peer-beta.maars.com", "peering-beta.maars.com");
 }
 
 TEST (node_config, v16_values)

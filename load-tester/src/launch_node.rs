@@ -73,7 +73,7 @@ pub fn launch_node(
             "work_peers": "",
             "preconfigured_peers": "",
             "preconfigured_representatives": [
-                "xrb_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo"
+                "maa_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo"
             ],
             "inactive_supply": "0",
             "password_fanout": "1024",
@@ -97,12 +97,12 @@ pub fn launch_node(
         File::create(data_dir.join("config.json")).chain_err(|| "failed to create config.json")?;
     serde_json::to_writer_pretty(config_writer, &config)
         .chain_err(|| "failed to write config.json")?;
-    let child = Command::new(nano_node)
+    let child = Command::new(maars_node)
         .arg("--data_path")
         .arg(&data_dir)
         .arg("--daemon")
         .spawn_async(&handle)
-        .chain_err(|| "failed to spawn nano_node")?;
+        .chain_err(|| "failed to spawn maars_node")?;
     let rpc_client = RpcClient::new(
         handle,
         format!("http://[::1]:{}/", rpc_port).parse().unwrap(),
@@ -119,7 +119,7 @@ pub fn connect_node<C: Connect>(
         "action": "keepalive",
         "address": "::1",
         "port": PEERING_PORT_START + i,
-    })).then(|x| x.chain_err(|| "failed to call nano_node RPC"))
+    })).then(|x| x.chain_err(|| "failed to call maars_node RPC"))
             .map(|_| ()),
     ) as _
 }
