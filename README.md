@@ -28,14 +28,14 @@ For more information, see [maars.com/coin/](https://maars.com/coin/).
 
 ### Links & Resources
 
-* [Nano Website](https://maars.com)
+* [Maars Website](https://maars.com)
 * [Telegram](https://t.me/maarscoin)
 * [Facebook](https://facebook.com/maarscoin)
 * [Instagram](https://instagram.com/maarscoin)
 * [Discord Chat](https://discord.gg/uNS9PY)
 * [Reddit](https://reddit.com/r/maarscoin)
 * [Twitter](https://twitter.com/maarscoin)
-* [GitHub wiki](https://github.com/nanocurrency/nano-node/wiki)
+* [GitHub wiki](https://github.com/cryptosearchengine/maars/wiki)
 
 ### Want to Contribute?
 
