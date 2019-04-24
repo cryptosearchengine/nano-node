@@ -48,19 +48,15 @@ unchecked_cutoff_time (std::chrono::seconds (4 * 60 * 60)) // 4 hours
 			enable_voting = true;
 			preconfigured_representatives.push_back (nano::genesis_account);
 			break;
+			
 		case nano::nano_networks::nano_beta_network:
 			preconfigured_peers.push_back (default_beta_peer_network);
-			preconfigured_representatives.emplace_back ("A59A47CC4F593E75AE9AD653FDA9358E2F7898D9ACC8C60E80D0495CE20FBA9F");
-			preconfigured_representatives.emplace_back ("259A4011E6CAD1069A97C02C3C1F2AAA32BC093C8D82EE1334F937A4BE803071");
-			preconfigured_representatives.emplace_back ("259A40656144FAA16D2A8516F7BE9C74A63C6CA399960EDB747D144ABB0F7ABD");
-			preconfigured_representatives.emplace_back ("259A40A92FA42E2240805DE8618EC4627F0BA41937160B4CFF7F5335FD1933DF");
-			preconfigured_representatives.emplace_back ("259A40FF3262E273EC451E873C4CDF8513330425B38860D882A16BCC74DA9B73");
+			preconfigured_representatives.emplace_back ("3FDCD4826919B4049A5E370F478E0888DBFEEB847B3278ED1111CA61866C19C3");
 			break;
+
 		case nano::nano_networks::nano_live_network:
 			preconfigured_peers.push_back (default_live_peer_network);
-			preconfigured_representatives.emplace_back ("36B3AFC042CCB5099DC163FA2BFE42D6E486991B685EAAB0DF73714D91A59400"); //update as per live net conf
-			preconfigured_representatives.emplace_back ("29126049B40D1755C0A1C02B71646EEAB9E1707C16E94B47100F3228D59B1EB2");
-			preconfigured_representatives.emplace_back ("2514452A978F08D1CF76BB40B6AD064183CF275D3CC5D3E0515DC96E2112AD4E");
+			preconfigured_representatives.emplace_back ("5F0B1343254E6B9D81174C3AADC59BE072274093F199C44CC6B85FAAC077ECD0"); //update as per live net conf
 			break;
 		default:
 			assert (false);
