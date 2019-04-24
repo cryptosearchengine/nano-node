@@ -16,35 +16,36 @@
 // Genesis keys for network variants
 namespace
 {
-char const * test_private_key_data = "34F0A37AAD20F4A260F0A5B3CB3D7FB50673212263E58A380BC10474BB039CE4";
-char const * test_public_key_data = "B0311EA55708D6A53C75CDBF88300259C6D018522FE3D4D0A242E431F9E8B6D0"; // xrb_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo
-char const * beta_public_key_data = "A59A47CC4F593E75AE9AD653FDA9358E2F7898D9ACC8C60E80D0495CE20FBA9F"; // xrb_3betaz86ypbygpqbookmzpnmd5jhh4efmd8arr9a3n4bdmj1zgnzad7xpmfp
-char const * live_public_key_data = "98CD08C0495818357EBF89221C099B0CFFB5FB0A749352D2F35F04B7B53A0630"; // xrb_3t6k35gi95xu6tergt6p69ck76ogmitsa8mnijtpxm9fkcm736xtoncuohr3
+char const * test_private_key_data = "DE9539836D6E03FDD2818AC6E3E42BAFC14B6A37CE427A2193D8D2C9E45E8387";
+char const * test_public_key_data = "22290E7FD6592DBEBC7E5678F3C732369D584662B3997F71767A11685AE1A440"; // maa_1ajb3szxepbfqty9womryh5m6fnxd3587ewshxrqeyijf3fg5b41bwqtrohe
+char const * beta_public_key_data = "3FDCD4826919B4049A5E370F478E0888DBFEEB847B3278ED1111CA61866C19C3"; // maa_1hywtk38k8fn1kf7wfrhay91j48uzuorayskh5pj46gce858r8g51j3bah3b
+char const * live_public_key_data = "5F0B1343254E6B9D81174C3AADC59BE072274093F199C44CC6B85FAAC077ECD0"; // maa_1qrd4f3kcmmdmp1jgm3toq4sqr5k6x1b9wesrj8efg4zod19hu8iph8f59nw
+
 char const * test_genesis_data = R"%%%({
 	"type": "open",
-	"source": "B0311EA55708D6A53C75CDBF88300259C6D018522FE3D4D0A242E431F9E8B6D0",
-	"representative": "maa_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo",
-	"account": "maa_3e3j5tkog48pnny9dmfzj1r16pg8t1e76dz5tmac6iq689wyjfpiij4txtdo",
-	"work": "9680625b39d3363d",
-	"signature": "ECDA914373A2F0CA1296475BAEE40500A7F0A7AD72A5A80C81D7FAB7F6C802B2CC7DB50F5DD0FB25B2EF11761FA7344A158DD5A700B21BD47DE5BD0F63153A02"
+    "source": "22290E7FD6592DBEBC7E5678F3C732369D584662B3997F71767A11685AE1A440",
+    "representative": "maa_1ajb3szxepbfqty9womryh5m6fnxd3587ewshxrqeyijf3fg5b41bwqtrohe",
+    "account": "maa_1ajb3szxepbfqty9womryh5m6fnxd3587ewshxrqeyijf3fg5b41bwqtrohe",
+    "work": "1a78e27d1e37e228",
+    "signature": "578E0638090E69FCC1B4ED32BC51ADF44B0E735F2FBFE59583DE98E5DC0AF4A2ADCDA8B306765165D38AB83AC8A0FDCDD9A16635416569FD64D9F5818F15900D"
 })%%%";
 
 char const * beta_genesis_data = R"%%%({
-        "type": "open",
-        "source": "A59A47CC4F593E75AE9AD653FDA9358E2F7898D9ACC8C60E80D0495CE20FBA9F",
-        "representative": "maa_3betaz86ypbygpqbookmzpnmd5jhh4efmd8arr9a3n4bdmj1zgnzad7xpmfp",
-        "account": "maa_3betaz86ypbygpqbookmzpnmd5jhh4efmd8arr9a3n4bdmj1zgnzad7xpmfp",
-        "work": "000000000f0aaeeb",
-        "signature": "A726490E3325E4FA59C1C900D5B6EEBB15FE13D99F49D475B93F0AACC5635929A0614CF3892764A04D1C6732A0D716FFEB254D4154C6F544D11E6630F201450B"
+    "type": "open",
+    "source": "3FDCD4826919B4049A5E370F478E0888DBFEEB847B3278ED1111CA61866C19C3",
+    "representative": "maa_1hywtk38k8fn1kf7wfrhay91j48uzuorayskh5pj46gce858r8g51j3bah3b",
+    "account": "maa_1hywtk38k8fn1kf7wfrhay91j48uzuorayskh5pj46gce858r8g51j3bah3b",
+    "work": "c21dfd6555df090b",
+    "signature": "D5006E045869F7F3CB0055EBD23F6740F2F93C9AEB3EC0061F9DEA3278B66F06724BB5DFDFA2143ABFAF22A73170E5A71030A994259B409EBFA96E4798C4C307"
 })%%%";
 
 char const * live_genesis_data = R"%%%({
 	"type": "open",
-	"source": "98CD08C0495818357EBF89221C099B0CFFB5FB0A749352D2F35F04B7B53A0630",
-	"representative": "maa_388f3516kp1r8ozdz4b45i6sp59zpqxinx6mcdbh8qr6pytmn3jio13tnehy",
-	"account": "maa_388f3516kp1r8ozdz4b45i6sp59zpqxinx6mcdbh8qr6pytmn3jio13tnehy",
-	"work": "62f05417dd3fb691",
-	"signature": "9F0C933C8ADE004D808EA1985FA746A7E95BA2A38F867640F53EC8F180BDFE9E2C1268DEAD7C2664F356E37ABA362BC58E46DBA03E523A7B5A19E4B6EB12BB02"
+    "source": "5F0B1343254E6B9D81174C3AADC59BE072274093F199C44CC6B85FAAC077ECD0",
+    "representative": "maa_1qrd4f3kcmmdmp1jgm3toq4sqr5k6x1b9wesrj8efg4zod19hu8iph8f59nw",
+    "account": "maa_1qrd4f3kcmmdmp1jgm3toq4sqr5k6x1b9wesrj8efg4zod19hu8iph8f59nw",
+    "work": "488d18d591d3b6e4",
+    "signature": "73A12763B056F5238D80613C1DA5AD5ADBC73D18495D5721A1443B5DC03982DD66352E1CD0CA024259D6D90A79A436507C16D75274A212824112FDADC2095801"
 })%%%";
 
 class ledger_constants
